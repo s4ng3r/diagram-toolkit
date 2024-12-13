@@ -24,6 +24,10 @@ const commonEngine = new CommonEngine();
  * ```
  */
 
+app.get('/api/zxc', (req, res) => {
+  res.send('Im alive!');
+});
+
 /**
  * Serve static files from /browser
  */
@@ -31,8 +35,8 @@ app.get(
   '**',
   express.static(browserDistFolder, {
     maxAge: '1y',
-    index: 'index.html'
-  }),
+    index: 'index.html',
+  })
 );
 
 /**
