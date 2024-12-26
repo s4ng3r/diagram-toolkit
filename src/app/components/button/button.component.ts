@@ -9,7 +9,7 @@ import { ButtonIcon, ButtonType, IconPosition } from './button.interface';
   styleUrl: './button.component.css',
 })
 export class ButtonComponent implements OnInit {
-  @Input() icon!: ButtonIcon;
+  @Input() icon?: ButtonIcon;
   @Input() type: ButtonType | string = ButtonType.FILLED;
 
   iconPos = 'order-none';
@@ -30,6 +30,10 @@ export class ButtonComponent implements OnInit {
         return 'btn-elevated';
       case ButtonType.FILLED:
         return 'btn-filled';
+      case ButtonType.OUTLINED:
+        return 'btn-outlined';
+      case ButtonType.TEXT:
+        return 'btn-text';
       default:
         return 'btn-filled';
     }

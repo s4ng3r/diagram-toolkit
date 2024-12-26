@@ -9,7 +9,7 @@ export enum IconPosition {
 }
 
 export enum ButtonType {
-  ELEVATED = 'evelated',
+  ELEVATED = 'elevated',
   FILLED = 'filled',
   OUTLINED = 'outlined',
   TEXT = 'text',

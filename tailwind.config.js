@@ -18,12 +18,17 @@ module.exports = {
         DEFAULT: '#10b981',
         container: '#10b981',
       },
+      outline: {
+        DEFAULT: '#6366f1',
+        var: '#10b981',
+      },
       error: {
         DEFAULT: '#ef4444',
         container: '#fca5a5',
       },
     },
     spacing: {
+      none: '0px',
       xs: '4px',
       sm: '8px',
       md: '16px',

@@ -3,7 +3,7 @@
 }
 
 .btn-elevated {
-  @apply btn-base bg-primary text-primary-on
+  @apply btn-base bg-primary text-primary-on drop-shadow-md
 }
 
 .btn-filled {
@@ -11,9 +11,9 @@
 }
 
 .btn-outlined {
-  @apply btn-base bg-primary text-primary-on
+  @apply btn-base text-primary border-outline border
 }
 
 .btn-text {
-  @apply btn-base bg-primary text-primary-on
+  @apply btn-base text-primary !p-none
 }
