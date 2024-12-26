@@ -17,3 +17,7 @@
 .btn-text {
   @apply btn-base text-primary !p-none
 }
+
+.btn-icon {
+  @apply btn-filled !gap-[0] !p-sm
+}

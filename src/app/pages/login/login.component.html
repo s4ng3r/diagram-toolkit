@@ -1,12 +1,16 @@
 <p>login works!</p>
-<div class="flex ml-xs gap-xs">
+<div class="flex ml-xs gap-sm">
   <app-button type="elevated">Elevated</app-button>
   <app-button [icon]="{ name: icons.download }">Icon Left</app-button>
   <app-button [icon]="{ name: icons.download, position: 'right' }">Icon Right</app-button>
   <app-button type="filled">Filled</app-button>
   <app-button type="outlined">Outlined</app-button>
+  <app-button type="icon" [icon]="{ name: icons.download }"/>
   <div class="flex items-center">
     <app-button type="text">Text</app-button>
   </div>
+</div>
+<div>
+  <app-card></app-card>
 </div>
 <app-footer></app-footer>

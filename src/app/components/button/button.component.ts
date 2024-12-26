@@ -34,6 +34,8 @@ export class ButtonComponent implements OnInit {
         return 'btn-outlined';
       case ButtonType.TEXT:
         return 'btn-text';
+      case ButtonType.ICON:
+        return 'btn-icon';
       default:
         return 'btn-filled';
     }

@@ -13,4 +13,5 @@ export enum ButtonType {
   FILLED = 'filled',
   OUTLINED = 'outlined',
   TEXT = 'text',
+  ICON = 'icon',
 }
