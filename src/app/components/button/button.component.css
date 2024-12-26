@@ -1,0 +1,19 @@
+.btn-base {
+  @apply inline-flex items-center px-md py-sm w-fit rounded-lg font-medium gap-sm
+}
+
+.btn-elevated {
+  @apply btn-base bg-primary text-primary-on
+}
+
+.btn-filled {
+  @apply btn-base bg-primary text-primary-on
+}
+
+.btn-outlined {
+  @apply btn-base bg-primary text-primary-on
+}
+
+.btn-text {
+  @apply btn-base bg-primary text-primary-on
+}

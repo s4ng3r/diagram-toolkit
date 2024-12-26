@@ -1,6 +1,7 @@
 <p>login works!</p>
-<div class="ml-xs">
-  <app-button/>
+<div class="flex ml-xs gap-xs">
+  <app-button [icon]="{ name: icons.download }" />
+  <app-button [icon]="{ name: icons.download, position: 'right' }" />
+  <app-button type="filled"/>
 </div>
-
 <app-footer></app-footer>

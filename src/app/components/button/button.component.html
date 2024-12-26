@@ -1,4 +1,6 @@
-<button class="bg-primary text-primary-on inline-flex items-center px-md py-sm w-fit rounded-lg font-medium gap-sm">
-  <span class="{{icons.loading}} text-lg"></span>
+<button class="btn-base {{btnType}}">
+  @if (icon) {
+  <span class="{{icon.name}} {{iconPos}} text-lg"></span>
+  }
   <div class="text-sm"> Login with Email</div>
 </button>
