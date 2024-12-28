@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 const { addDynamicIconSelectors } = require('@iconify/tailwind');
 
 module.exports = {
@@ -7,24 +8,34 @@ module.exports = {
     colors: {
       primary: {
         DEFAULT: '#6366f1',
-        container: '#6366f1',
+        container: '#c7d2fe',
         on: '#ffffff',
       },
       secondary: {
         DEFAULT: '#10b981',
         container: '#10b981',
+        on: '#ffffff',
       },
       tertiary: {
         DEFAULT: '#10b981',
         container: '#10b981',
+        on: '#ffffff',
       },
       outline: {
-        DEFAULT: '#6366f1',
-        var: '#10b981',
+        DEFAULT: '#64748b',
+        var: '#cbd5e1',
+      },
+      surface: {
+        DEFAULT: '#f8fafc',
+        dim: '#e2e8f0',
+        on: '#0f172a',
       },
       error: {
         DEFAULT: '#ef4444',
         container: '#fca5a5',
+      },
+      white: {
+        DEFAULT: '#ffffff',
       },
     },
     spacing: {
@@ -39,7 +50,11 @@ module.exports = {
       '4xl': '56px',
       '5xl': '64px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [addDynamicIconSelectors()],
 };

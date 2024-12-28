@@ -1,1 +1,16 @@
-<p>card works!</p>
+<div class="card-component {{cardType}}">
+  <div class="card-header">
+    <div class="card-title">
+      <ng-content select="[card-title]" />
+    </div>
+    <div class="card-desc">
+      <ng-content select="[card-desc]" />
+    </div>
+  </div>
+  <div class="card-content">
+    <ng-content select="[card-content]" />
+  </div>
+  <div class="card-footer">
+    <ng-content select="[card-footer]" />
+  </div>
+</div>

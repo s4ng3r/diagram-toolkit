@@ -5,12 +5,17 @@
   <app-button [icon]="{ name: icons.download, position: 'right' }">Icon Right</app-button>
   <app-button type="filled">Filled</app-button>
   <app-button type="outlined">Outlined</app-button>
-  <app-button type="icon" [icon]="{ name: icons.download }"/>
+  <app-button type="icon" [icon]="{ name: icons.download }" />
   <div class="flex items-center">
     <app-button type="text">Text</app-button>
   </div>
 </div>
-<div>
-  <app-card></app-card>
+<div class="flex justify-center bg-surface py-lg">
+  <app-card>
+    <div card-title>Card Title</div>
+    <div card-desc>Card description</div>
+    <div card-content>Content</div>
+    <div card-footer>Footer</div>
+  </app-card>
 </div>
 <app-footer></app-footer>

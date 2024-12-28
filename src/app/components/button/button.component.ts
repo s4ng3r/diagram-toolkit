@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ButtonIcon, ButtonType, IconPosition } from './button.interface';
+import { ButtonIcon, ButtonType, IconPosition } from './button.interfaces';
 
 @Component({
   selector: 'app-button',
