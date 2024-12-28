@@ -11,7 +11,7 @@
 }
 
 .card-desc {
-  @apply flex text-sm;
+  @apply flex text-sm opacity-70;
 }
 
 .card-content {
@@ -19,7 +19,7 @@
 }
 
 .card-footer {
-  @apply flex;
+  @apply text-sm;
 }
 
 .card-elevated {

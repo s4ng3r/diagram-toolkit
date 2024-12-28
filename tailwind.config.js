@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     colors: {
       primary: {
-        DEFAULT: '#6366f1',
+        light: '#eef2ff',
+        DEFAULT: '#4f46e5',
         container: '#c7d2fe',
         on: '#ffffff',
       },
@@ -42,13 +43,14 @@ module.exports = {
       none: '0px',
       xs: '4px',
       sm: '8px',
-      md: '16px',
-      lg: '24px',
-      xl: '32px',
-      '2xl': '40px',
-      '3xl': '48px',
-      '4xl': '56px',
-      '5xl': '64px',
+      md: '12px',
+      lg: '16px',
+      xl: '24px',
+      '2xl': '32px',
+      '3xl': '40px',
+      '4xl': '48px',
+      '5xl': '56px',
+      '6xl': '64px',
     },
     extend: {
       fontFamily: {

@@ -4,6 +4,20 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white text-surface-on
+    @apply font-sans bg-white text-surface-on;
   }
+
+  button {
+    @apply focus:outline-none;
+  }
+
+  input {
+    @apply focus:outline-none;
+  }
+}
+
+@layer components {
+  /* .btn-icon {
+    @apply !rounded-full
+  } */
 }

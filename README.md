@@ -7,7 +7,9 @@ https://m2.material.io/inline-tools/color/
 https://material-foundation.github.io/material-theme-builder/
 
 Crear herramienta para seleccionar un color base y generar todas las variantes junto con
-el config para tailwind
+el config para tailwind.
+
+WCAG:
 
 ## Tree Folder
 tree src /f | findstr /V /I "node_modules .angular .vscode"

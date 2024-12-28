@@ -1,0 +1,11 @@
+.input-component {  
+  input {
+    @apply bg-white rounded-md px-md py-sm w-full text-sm drop-shadow-sm ring-1 ring-outline-var focus:ring-2 focus:ring-primary;
+  }
+  @apply grid gap-sm
+}
+
+.input-label {
+  @apply text-sm font-medium leading-none;
+}
+

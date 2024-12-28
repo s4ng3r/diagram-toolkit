@@ -1,23 +1,26 @@
 .btn-base {
-  @apply inline-flex items-center px-md py-sm w-fit rounded-lg font-medium gap-sm
+  @apply inline-flex items-center px-md py-sm w-fit rounded-lg font-medium gap-sm  select-none
+         focus:ring-1 focus:ring-outline
+         hover:bg-opacity-90;
 }
 
 .btn-elevated {
-  @apply btn-base bg-primary text-primary-on drop-shadow-md
+  @apply btn-base bg-primary text-primary-on drop-shadow-md;
 }
 
 .btn-filled {
-  @apply btn-base bg-primary text-primary-on
+  @apply btn-base bg-primary text-primary-on;
 }
 
 .btn-outlined {
-  @apply btn-base text-primary border-outline border
+  @apply btn-base text-primary border-outline-var border
+         hover:!bg-primary-light;
 }
 
 .btn-text {
-  @apply btn-base text-primary !p-none
+  @apply btn-base text-primary !p-none;
 }
 
 .btn-icon {
-  @apply btn-filled !gap-[0] !p-sm
+  @apply btn-filled !gap-[0] !p-sm;
 }
