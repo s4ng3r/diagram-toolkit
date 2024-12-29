@@ -1,5 +1,5 @@
 .btn-base {
-  @apply inline-flex items-center px-md py-sm w-fit rounded-lg font-medium gap-sm  select-none
+  @apply inline-flex items-center justify-center px-md py-sm w-full rounded-lg font-medium gap-sm select-none
          focus:ring-2 focus:ring-inherit
          hover:!bg-opacity-90;
 }
@@ -41,7 +41,7 @@
 }
 
 .btn-icon {
-  @apply btn-base text-xl !gap-[0] !p-sm;
+  @apply btn-base text-xl !gap-[0] !p-sm !w-fit;
   &.primary {
     @apply bg-primary text-on-primary;
   }

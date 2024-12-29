@@ -1,5 +1,5 @@
 .card-component {
-  @apply flex flex-col p-md rounded-xl w-fit;
+  @apply flex flex-col p-xl rounded-xl w-fit;
 }
 
 .card-header {
@@ -23,7 +23,7 @@
 }
 
 .card-elevated {
-  @apply bg-white shadow-md
+  @apply bg-white shadow
 }
 
 .card-filled {

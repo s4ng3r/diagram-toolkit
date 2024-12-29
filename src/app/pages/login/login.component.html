@@ -1,4 +1,27 @@
-<p>login works!</p>
+<div class="flex justify-center h-screen items-center bg-surface">
+  <app-card>
+    <div card-title class="flex w-full">Sign in to your account</div>
+    <div card-content class="mt-xl">
+      <div class="flex flex-col gap-lg">
+        <app-input
+          [type]="'text'"
+          [placeholder]="'Email'"
+          [label]="{ id: 'email', name: 'Email' }"
+          [(ngModel)]="email"
+        />
+        <app-input
+          [type]="'text'"
+          [placeholder]="'Password'"
+          [label]="{ id: 'password', name: 'Password' }"
+          [(ngModel)]="password"
+        />
+      </div>
+    </div>
+    <div card-footer class="mt-xl">
+      <app-button variant="filled" (click)="onSigIn()" >Sign in</app-button>
+    </div>
+  </app-card>
+</div>
 <div class="flex ml-xs gap-sm">
   <app-button variant="elevated">Elevated</app-button>
   <app-button [icon]="{ name: icons.download }">Icon Left</app-button>
@@ -20,7 +43,11 @@
 </div>
 <div class="flex flex-col p-sm gap-md">
   <div class="w-1/6">
-    <app-input [type]="'text'" [placeholder]="'Email'" [label]="{ id: 'my-input', name: 'Email'}" />
+    <app-input
+      [type]="'text'"
+      [placeholder]="'Email'"
+      [label]="{ id: 'my-input', name: 'Email' }"
+    />
   </div>
   <div class="w-1/6">
     <app-input [type]="'password'" [placeholder]="'Password'" />

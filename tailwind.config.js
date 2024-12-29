@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 const { addDynamicIconSelectors } = require('@iconify/tailwind');
 
 module.exports = {
@@ -8,6 +8,7 @@ module.exports = {
     colors: {
       inherit: 'inherit',
       current: 'currentColor',
+      white: '#ffffff',
       primary: {
         light: '#eef2ff',
         DEFAULT: '#4f46e5',
@@ -39,10 +40,7 @@ module.exports = {
       outline: {
         DEFAULT: '#64748b',
         var: '#cbd5e1',
-      },
-      white: {
-        DEFAULT: '#ffffff',
-      },
+      }
     },
     spacing: {
       none: '0px',
