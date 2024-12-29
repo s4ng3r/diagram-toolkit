@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { InputLabel } from './input.interfaces';
 
 @Component({
   selector: 'app-input',
@@ -10,6 +11,5 @@ import { Component, Input } from '@angular/core';
 export class InputComponent {
   @Input() type = 'text';
   @Input() placeholder = '';
-  @Input() label?: string;
-  @Input() id?: string;
+  @Input() label?: InputLabel;
 }

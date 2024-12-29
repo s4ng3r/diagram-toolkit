@@ -6,34 +6,39 @@ module.exports = {
   content: ['./src/**/*.{html,ts}'],
   theme: {
     colors: {
+      inherit: 'inherit',
+      current: 'currentColor',
       primary: {
         light: '#eef2ff',
         DEFAULT: '#4f46e5',
         container: '#c7d2fe',
-        on: '#ffffff',
       },
       secondary: {
+        light: '#ecfdf5',
         DEFAULT: '#10b981',
         container: '#10b981',
-        on: '#ffffff',
       },
       tertiary: {
         DEFAULT: '#10b981',
         container: '#10b981',
-        on: '#ffffff',
       },
-      outline: {
-        DEFAULT: '#64748b',
-        var: '#cbd5e1',
-      },
-      surface: {
-        DEFAULT: '#f8fafc',
-        dim: '#e2e8f0',
-        on: '#0f172a',
+      on: {
+        primary: '#ffffff',
+        secondary: '#ffffff',
+        tertiary: '#ffffff',
+        surface: '#0f172a',
       },
       error: {
         DEFAULT: '#ef4444',
         container: '#fca5a5',
+      },
+      surface: {
+        DEFAULT: '#f8fafc',
+        dim: '#e2e8f0',
+      },
+      outline: {
+        DEFAULT: '#64748b',
+        var: '#cbd5e1',
       },
       white: {
         DEFAULT: '#ffffff',

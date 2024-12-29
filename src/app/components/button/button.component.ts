@@ -1,19 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { ButtonIcon, ButtonType, IconPosition } from './button.interfaces';
+import { ButtonIcon, ButtonVariant, IconPosition } from './button.interfaces';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './button.component.html',
   styleUrl: './button.component.css',
 })
 export class ButtonComponent implements OnInit {
   @Input() icon?: ButtonIcon;
-  @Input() type: ButtonType | string = ButtonType.FILLED;
+  @Input() variant: ButtonVariant | string = ButtonVariant.FILLED;
 
   iconPos = 'order-none';
   btnType = 'btn-filled';
+  btnStyle = 'primary';
 
   ngOnInit() {
     if (this.icon && !this.icon.position) {
@@ -21,23 +23,18 @@ export class ButtonComponent implements OnInit {
     }
 
     this.iconPos = this.icon?.position === IconPosition.RIGHT ? 'order-2' : 'order-none';
-    this.btnType = this.getBtnTypeClass(this.type);
+    this.btnType = this.getBtnTypeClass(this.variant);
   }
 
-  private getBtnTypeClass(type: ButtonType | string): string {
-    switch (type) {
-      case ButtonType.ELEVATED:
-        return 'btn-elevated';
-      case ButtonType.FILLED:
-        return 'btn-filled';
-      case ButtonType.OUTLINED:
-        return 'btn-outlined';
-      case ButtonType.TEXT:
-        return 'btn-text';
-      case ButtonType.ICON:
-        return 'btn-icon';
-      default:
-        return 'btn-filled';
-    }
+  private getBtnTypeClass(variant: ButtonVariant | string): string {
+    const variantClasses: Record<string, string> = {
+      [ButtonVariant.ELEVATED]: 'btn-elevated',
+      [ButtonVariant.FILLED]: 'btn-filled',
+      [ButtonVariant.OUTLINED]: 'btn-outlined',
+      [ButtonVariant.TEXT]: 'btn-text',
+      [ButtonVariant.ICON]: 'btn-icon',
+    };
+  
+    return variantClasses[variant] || 'btn-filled';
   }
 }

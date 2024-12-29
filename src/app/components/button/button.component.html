@@ -1,8 +1,8 @@
-<button class="{{btnType}}" [attr.aria-label]="btnType">
+<button [ngClass]="[btnType, btnStyle]" [attr.aria-label]="btnType">
   @if (icon) {
-    <span class="{{icon.name}} {{iconPos}} text-lg"></span>
+    <span [ngClass]="[icon.name,iconPos]"></span>
   }
   <div class="text-sm">
-    <ng-content/>
+    <ng-content />
   </div>
 </button>

@@ -1,6 +1,8 @@
 <div class="input-component">
   @if (label) {
-    <label for="{{id}}" class="input-label">{{label}}</label>
+    <label for="{{label.id}}" class="input-label">{{label.name}}</label>
+    <input id="{{label.id}}"type="{{type}}" placeholder="{{placeholder}}"/>
+  } @else {
+    <input type="{{type}}" placeholder="{{placeholder}}"/>
   }
-  <input id="{{id}}" type="{{type}}" placeholder="{{placeholder}}"/>
 </div>

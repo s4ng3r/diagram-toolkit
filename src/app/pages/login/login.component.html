@@ -1,13 +1,13 @@
 <p>login works!</p>
 <div class="flex ml-xs gap-sm">
-  <app-button type="elevated">Elevated</app-button>
+  <app-button variant="elevated">Elevated</app-button>
   <app-button [icon]="{ name: icons.download }">Icon Left</app-button>
   <app-button [icon]="{ name: icons.download, position: 'right' }">Icon Right</app-button>
-  <app-button type="filled">Filled</app-button>
-  <app-button type="outlined">Outlined</app-button>
-  <app-button type="icon" [icon]="{ name: icons.download }" />
+  <app-button variant="filled">Filled</app-button>
+  <app-button variant="outlined">Outlined</app-button>
+  <app-button variant="icon" [icon]="{ name: icons.download }" />
   <div class="flex items-center">
-    <app-button type="text">Text</app-button>
+    <app-button variant="text">Text</app-button>
   </div>
 </div>
 <div class="flex justify-center bg-surface py-lg">
@@ -18,7 +18,12 @@
     <div card-footer>Footer</div>
   </app-card>
 </div>
-<div class="flex p-sm">
-  <app-input [id]="'my-input'" [label]="'Email'" [type]="'text'" [placeholder]="'Email'" />
+<div class="flex flex-col p-sm gap-md">
+  <div class="w-1/6">
+    <app-input [type]="'text'" [placeholder]="'Email'" [label]="{ id: 'my-input', name: 'Email'}" />
+  </div>
+  <div class="w-1/6">
+    <app-input [type]="'password'" [placeholder]="'Password'" />
+  </div>
 </div>
 <app-footer></app-footer>

@@ -8,7 +8,7 @@ export enum IconPosition {
   RIGHT = 'right',
 }
 
-export enum ButtonType {
+export enum ButtonVariant {
   ELEVATED = 'elevated',
   FILLED = 'filled',
   OUTLINED = 'outlined',
