@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { InputLabel } from './input.interfaces';
+import { useId } from '@config/utils.config';
+import { INPUT_REGEX } from './input.interfaces';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
   providers: [
@@ -19,16 +21,24 @@ import { InputLabel } from './input.interfaces';
 export class InputComponent implements ControlValueAccessor {
   @Input() type = 'text';
   @Input() placeholder = '';
-  @Input() label?: InputLabel;
+  @Input() label?: string;
+  @Input() validate = false;
 
+  uniqueId = useId('input');
   private _value = '';
+  isValid = true;
 
   get value() {
     return this._value;
   }
+
   set value(val) {
     this._value = val;
     this.onChange(val);
+
+    if (this.type === 'email') {
+      this.isValid = INPUT_REGEX.email.test(this._value);
+    }
   }
 
   onChange!: (val: string) => void;

@@ -2,23 +2,29 @@
   <app-card>
     <div card-title class="flex w-full">Sign in to your account</div>
     <div card-content class="mt-xl">
-      <div class="flex flex-col gap-lg">
-        <app-input
-          [type]="'text'"
-          [placeholder]="'Email'"
-          [label]="{ id: 'email', name: 'Email' }"
-          [(ngModel)]="email"
-        />
-        <app-input
-          [type]="'text'"
-          [placeholder]="'Password'"
-          [label]="{ id: 'password', name: 'Password' }"
-          [(ngModel)]="password"
-        />
-      </div>
+      <form #loginForm="ngForm">
+        <div class="flex flex-col gap-lg">
+          <app-input
+            [type]="'text'"
+            [placeholder]="'Email'"
+            [label]="'Email'"
+            [validate]="validate"
+            [(ngModel)]="email"
+            name="email"
+          />
+          <app-input
+            [type]="'text'"
+            [placeholder]="'Password'"
+            [label]="'Password'"
+            [validate]="validate"
+            [(ngModel)]="password"
+            name="password"
+          />
+        </div>
+      </form>
     </div>
     <div card-footer class="mt-xl">
-      <app-button variant="filled" (click)="onSigIn()" >Sign in</app-button>
+      <app-button variant="filled" (click)="onSigIn()">Sign in</app-button>
     </div>
   </app-card>
 </div>
@@ -46,7 +52,7 @@
     <app-input
       [type]="'text'"
       [placeholder]="'Email'"
-      [label]="{ id: 'my-input', name: 'Email' }"
+      [label]="'Email'"
     />
   </div>
   <div class="w-1/6">

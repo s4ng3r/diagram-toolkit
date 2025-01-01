@@ -17,9 +17,12 @@ export class LoginComponent {
   icons = ICON_LIST;
 
   email = '';
+  email2 = '';
   password = '';
+  validate = false;
 
   onSigIn() {
+    this.validate = true;
     console.log('email: ', this.email);
     console.log('password: ', this.password);
   }

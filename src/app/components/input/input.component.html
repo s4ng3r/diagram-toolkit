@@ -1,16 +1,18 @@
 <div class="input-component">
   @if (label) {
-  <label for="{{ label.id }}" class="input-label">{{ label.name }}</label>
+  <label for="{{ uniqueId }}" class="input-label">{{ label }}</label>
   <input
-    id="{{ label.id }}"
-    name="{{ label.id }}"
+    id="{{ uniqueId }}"
+    name="{{ uniqueId }}"
     type="{{ type }}"
     placeholder="{{ placeholder }}"
     [value]="value"
     (input)="handleInputChange($event)"
+    [ngClass]="{ 'input-error': !isValid && validate }"
   />
   } @else {
   <input
+    id="{{ uniqueId }}"
     type="{{ type }}"
     placeholder="{{ placeholder }}"
     [value]="value"

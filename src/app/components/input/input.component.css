@@ -1,11 +1,16 @@
 .input-component {  
   input {
-    @apply bg-white rounded-md px-md py-sm w-full text-sm drop-shadow-sm ring-1 ring-outline-var focus:ring-2 focus:ring-primary;
+    @apply bg-white rounded-md px-md py-sm w-full text-sm drop-shadow-sm ring-1 ring-outline-var focus:ring-2 focus:ring-primary
+             invalid:!ring-2 invalid:!ring-error
   }
   @apply grid gap-sm
 }
 
 .input-label {
   @apply text-sm font-medium leading-none;
+}
+
+.input-error {
+  @apply !ring-2 !ring-error
 }
 
