@@ -1,0 +1,43 @@
+flowchart LR
+  subgraph Elevation
+    MTX
+  end
+  subgraph Transit
+    IMP-LOAD
+    subgraph Kubernete Cluster
+      subgraph Namespace: 'mantto-support-dev'
+        MXI-ODS
+        MXI-RPA
+      end
+    end
+  end
+  subgraph Main
+    G-PUBSUB1
+    G-PUBSUB2
+    G-BUCKET
+    G-DB
+    subgraph Kubernete Cluster
+        subgraph Namespace: mantto-support-dev
+          MXI-JOURNEY
+          MXI-BFF
+          MXI-FE
+        end
+    end
+  end
+  WAF
+  MTX-->MXI-RPA
+  MTX-->MXI-ODS
+  MTX-->IMP-LOAD
+  MXI-ODS-->MXI-JOURNEY
+  MXI-RPA-->MXI-JOURNEY
+  IMP-LOAD-->G-PUBSUB1
+  IMP-LOAD-->G-PUBSUB2
+  IMP-LOAD-->G-DB
+  G-PUBSUB1-->MXI-JOURNEY
+  G-PUBSUB2-->MXI-JOURNEY
+  MXI-JOURNEY-->G-DB
+  MXI-BFF-->G-BUCKET
+  MXI-JOURNEY-->G-BUCKET
+  MXI-JOURNEY-->MXI-BFF
+  MXI-BFF-->MXI-FE
+  MXI-FE-->WAF

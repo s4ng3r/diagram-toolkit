@@ -40,7 +40,7 @@ module.exports = {
       outline: {
         DEFAULT: '#64748b',
         var: '#cbd5e1',
-      }
+      },
     },
     spacing: {
       none: '0px',
@@ -58,6 +58,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      dropShadow: {
+        'mmd-node': '3px 3px 2px rgb(0 0 0 / 0.2)',
       },
     },
   },

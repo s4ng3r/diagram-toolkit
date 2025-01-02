@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ButtonComponent } from '@components/button/button.component';
 import { FooterComponent } from '@components/footer/footer.component';
 import { InputComponent } from '@components/input/input.component';
@@ -21,9 +22,13 @@ export class LoginComponent {
   password = '';
   validate = false;
 
+  constructor(private router: Router) {}
+
   onSigIn() {
     this.validate = true;
     console.log('email: ', this.email);
     console.log('password: ', this.password);
+    this.router.navigate(['/dashboard']);
+
   }
 }

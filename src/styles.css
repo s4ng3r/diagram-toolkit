@@ -14,4 +14,19 @@
   input {
     @apply focus:outline-none;
   }
+
+  .mmd-node {
+    & g rect {
+      @apply !stroke-primary !stroke-1 !fill-primary-container drop-shadow-mmd-node;
+    }
+    & g polygon {
+      @apply !stroke-primary !stroke-1 !fill-primary-container drop-shadow-mmd-node;
+    }
+    & g path {
+      @apply !stroke-primary !stroke-1 !fill-primary-container drop-shadow-mmd-node;
+    }
+    & .nodeLabel {
+      @apply !text-on-surface;
+    }
+  }
 }
